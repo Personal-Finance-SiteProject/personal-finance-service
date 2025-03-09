@@ -35,12 +35,12 @@ export class UserEntity {
     @Column({ name: 'status', type: 'int', default: 1 })
     status: number;
 
-    @Column({ name: 'company_id', type: 'int', nullable: true })
-    companyId?: number;
+    // @Column({ name: 'company_id', type: 'int', nullable: true })
+    // companyId?: number;
 
-    @Column({ name: 'pwd_expiration_at', type: 'datetime', nullable: true })
-    pwdExpirationAt?: Date;
+    // @Column({ name: 'pwd_expiration_at', type: 'datetime', nullable: true })
+    // pwdExpirationAt?: Date;
 
-    @Column({ name: 'extra_info', type: 'json', nullable: true })
-    extraInfo?: any;
+    // @Column({ name: 'extra_info', type: 'json', nullable: true })
+    // extraInfo?: any;
 }

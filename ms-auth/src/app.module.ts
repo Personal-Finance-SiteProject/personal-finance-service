@@ -5,6 +5,9 @@ import { JwtModule } from '@nestjs/jwt';
 import { AuthService } from './services/auth.service';
 import { CryptoService } from './services/crypto.service';
 import { UserEntity } from "./common/entities/users.entity";
+import { AuthController } from "./controllers/auth.controller";
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 
 @Module({
@@ -26,8 +29,9 @@ import { UserEntity } from "./common/entities/users.entity";
             signOptions: {expiresIn: process.env.JWT_EXPIRES_IN},
         }),
 
+
     ],
-    controllers: [],
+    controllers: [AuthController],
     providers: [AuthService, CryptoService],
 })
 export class AppModule {
