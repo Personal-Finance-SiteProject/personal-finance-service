@@ -3,11 +3,6 @@ dotenv.config();
 
 
 export function RabbitAuthMQ() {
-    console.log('🔧 Configuración RabbitMQ:', {
-        url: process.env.AMQP_URL,
-        AuthQueue: process.env.MQ_AUTH_QUEUE
-    });
-
     return {
         url: process.env.AMQP_URL,
         AuthQueue: process.env.MQ_AUTH_QUEUE,
