@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserEntity } from "./common/entities/users.entity";
 import { ConfigModule } from '@nestjs/config';
+import { UtilLib } from "./common/libs/util.lib";
 
 @Module({
   imports: [
@@ -19,6 +20,9 @@ import { ConfigModule } from '@nestjs/config';
     TypeOrmModule.forFeature([UserEntity]),
   ],
   controllers: [],
-  providers: [],
+  providers: [
+    UtilLib
+  ],
+
 })
 export class AppModule {}
